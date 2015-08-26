@@ -18,19 +18,17 @@ var timer = (function(){
             string += ~ ~remainingTime[i] + " " + i + ", ";
         }
 
+        console.log('hi');
+
         _render(string)
     }
 
     function _render(data) {
-        return $counter.innerHTML = data.substring(0, data.length - 2);
+        $counter.innerHTML = data.substring(0, data.length - 2);
     }
 
-    return {
-        calculateTime: calculateTime
-    }
-
+    setInterval(function() {
+        calculateTime();
+    }, 1000);
 
 })();
-
-// Update the timer every 1 second
-setInterval(timer.calculateTime(), 1000);
