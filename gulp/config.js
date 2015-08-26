@@ -32,6 +32,9 @@ module.exports = {
             use: [ nib() ]
         }
     },
+    deploy: {
+        src: $p.build.index + '**/*'
+    }
     /* ------------------------------
         BrowserSync
     ------------------------------ */
