@@ -34,7 +34,7 @@ module.exports = {
     },
     deploy: {
         src: $p.build.index + '**/*'
-    }
+    },
     /* ------------------------------
         BrowserSync
     ------------------------------ */
