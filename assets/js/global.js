@@ -18,8 +18,6 @@ var timer = (function(){
             string += ~ ~remainingTime[i] + " " + i + ", ";
         }
 
-        console.log('hi');
-
         _render(string)
     }
 
