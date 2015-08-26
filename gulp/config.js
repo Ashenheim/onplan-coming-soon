@@ -2,6 +2,8 @@
     Configuration file
 ==================================== */
 var nib = require('nib');
+var csswring = require('csswring');
+var autoprefixer = require('autoprefixer');
 
 var $p = {
     bower: "./bower_components/",
@@ -28,9 +30,9 @@ module.exports = {
         ]
     },
     /* ------------------------------
-        Stylus
+        Style
     ------------------------------ */
-    stylus: {
+    style: {
         src: [ $p.source.style + 'style.styl'],
         dest: $p.build.style,
         watch: [
@@ -38,7 +40,13 @@ module.exports = {
             $p.source.style + '**/*.styl'
         ],
         settings: {
-            use: [ nib() ]
+            stylus: {
+                use: [ nib() ]
+            },
+            postcss: [
+                csswring(),
+                autoprefixer()
+            ]
         }
     },
     /* ------------------------------

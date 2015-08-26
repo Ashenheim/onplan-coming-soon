@@ -15,7 +15,7 @@ gulp.task('watch:html', function() {
 })
 
 gulp.task('watch:style', function() {
-    gulp.watch( config.stylus.watch, ['style']);
+    gulp.watch( config.style.watch, ['style']);
 });
 
 gulp.task('watch', ['watch:html', 'watch:style']);
